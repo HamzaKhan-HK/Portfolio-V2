@@ -36,7 +36,7 @@ export default function Hero() {
           </Button>
         </Link>
         <Link
-          href={"www.linkedin.com/in/hamza--khan"}
+          href={"https://linkedin.com/in/hamza--khan"}
           target="_blank"
           onMouseOver={() => {
             setIsHovered(true);
