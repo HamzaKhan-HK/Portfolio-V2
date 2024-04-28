@@ -9,7 +9,7 @@ export default function Cursor() {
   const { isHovered } = useContext(CursorContext);
 
   const mouse = useRef({ x: 0, y: 0 });
-  const circles = useRef<(HTMLDivElement | null)[]>([]);
+  const circles = useRef<any[]>([]);
   const size = isHovered ? 100 : 30;
   const delay = isHovered ? 0.065 : 0.03;
 
@@ -20,9 +20,9 @@ export default function Cursor() {
     y: 0,
   });
 
-  const lerp = (x: any, y: any, a: any) => x * (1 - a) + y * a;
+  const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
-  const manageMouseMove = (e: any) => {
+  const manageMouseMove = (e: { clientX: any; clientY: any }) => {
     const { clientX, clientY } = e;
 
     mouse.current = {
@@ -31,7 +31,7 @@ export default function Cursor() {
     };
   };
 
-  const moveCircle = (x: any, y: any) => {
+  const moveCircle = (x: number, y: number) => {
     circles.current.forEach((circle, i) =>
       gsap.set(circle, { x, y, xPercent: -50, yPercent: -50 })
     );
@@ -65,7 +65,7 @@ export default function Cursor() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          ref={(ref: HTMLDivElement | null) => (circles.current[i] = ref)}
+          ref={(ref: any) => (circles.current[i] = ref)}
           key={i}
           style={{
             backgroundColor: color,
@@ -76,7 +76,7 @@ export default function Cursor() {
               (array.length - i) * delay
             }s ease-out`,
           }}
-          className="top-0 left-0 fixed rounded-full -z-10 mix-blend-difference pointer-events-none hidden md:block"
+          className="top-0 left-0 fixed rounded-full -z-10 mix-blend-difference pointer-events-none"
         />
       ))}
     </>
