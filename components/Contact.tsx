@@ -68,7 +68,7 @@ export default function Contact() {
                 <SquareArrowOutUpRight className="size-4" />
               </Link>
               <Link
-                href={"www.linkedin.com/in/hamza--khan"}
+                href={"https://linkedin.com/in/hamza--khan"}
                 target="_blank"
                 className="flex items-center gap-1 hover:underline"
                 onMouseOver={() => {
