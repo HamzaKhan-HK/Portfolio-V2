@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { Separator } from "./ui/separator";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { ArrowUp, SquareArrowOutUpRight } from "lucide-react";
 import { useContext } from "react";
 import { CursorContext } from "@/context/CursorContext";
-import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -98,9 +97,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        <Button
-          className="mt-24 w-fit md:col-start-2 text-foreground font-semibold bg-transparent border border-secondary rounded-full p-6 hover:border-transparent hover:bg-transparent transition-all duration-300 "
+        <div
+          className="mt-24 flex items-center gap-1 hover:underline w-fit h-fit cursor-pointer md:col-start-2"
           onMouseOver={() => {
             setIsHovered(true);
           }}
@@ -113,8 +111,9 @@ export default function Contact() {
             });
           }}
         >
-          Back to top
-        </Button>
+          <p>Back to top</p>
+          <ArrowUp className="size-5" />
+        </div>
       </motion.div>
     </section>
   );

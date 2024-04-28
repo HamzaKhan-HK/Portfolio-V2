@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { CursorContext } from "@/context/CursorContext";
 import { PROJECTS } from "@/lib/projects";
 import { motion } from "framer-motion";
+import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import { useContext } from "react";
 
@@ -57,11 +58,10 @@ export default function Home() {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="w-fit md:col-start-2"
+          className="flex items-center gap-1 hover:underline w-fit h-fit md:col-start-2"
         >
-          <Button className="text-foreground font-semibold bg-transparent border border-secondary rounded-full p-6 hover:border-transparent hover:bg-transparent transition-all duration-300">
-            View all projects
-          </Button>
+          <p>View all projects</p>
+          <SquareArrowOutUpRight className="size-4" />
         </Link>
       </motion.div>
       <Contact />

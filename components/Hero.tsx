@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CursorContext } from "@/context/CursorContext";
 import { useContext } from "react";
 import { motion } from "framer-motion";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export default function Hero() {
   const { setIsHovered } = useContext(CursorContext);
@@ -20,7 +21,7 @@ export default function Hero() {
       <h1 className="text-3xl font-bold max-w-4xl md:text-5xl">
         Creating modern and innovative websites for a unique digital experience.
       </h1>
-      <div className="space-x-4">
+      <div className="flex items-center gap-16">
         <Link
           href={"mailto:hamzak1738@gmail.com"}
           target="_blank"
@@ -30,10 +31,10 @@ export default function Hero() {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
+          className="flex items-center gap-1 hover:underline w-fit h-fit"
         >
-          <Button className="text-foreground font-semibold bg-transparent border border-secondary rounded-full p-6 hover:border-transparent hover:bg-transparent transition-all duration-300">
-            Send a message
-          </Button>
+          <p>Send a message</p>
+          <SquareArrowOutUpRight className="size-4" />
         </Link>
         <Link
           href={"https://linkedin.com/in/hamza--khan"}
@@ -44,10 +45,10 @@ export default function Hero() {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
+          className="flex items-center gap-1 hover:underline w-fit h-fit"
         >
-          <Button className="text-foreground font-semibold bg-transparent border border-secondary rounded-full p-6 hover:border-transparent hover:bg-transparent transition-all duration-300">
-            Let&apos;s connect
-          </Button>
+          <p>Let&apos;s connect</p>
+          <SquareArrowOutUpRight className="size-4" />
         </Link>
       </div>
     </motion.section>
