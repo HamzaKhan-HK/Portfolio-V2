@@ -47,7 +47,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
-        className="mt-24 grid md:grid-cols-2"
+        className="font-semibold mt-24 grid md:grid-cols-2"
       >
         <Link
           href={"https://github.com/HamzaKhan-HK"}
@@ -60,7 +60,7 @@ export default function Home() {
           }}
           className="flex items-center gap-1 hover:underline w-fit h-fit md:col-start-2"
         >
-          <p>View all projects</p>
+          View all projects
           <SquareArrowOutUpRight className="size-4" />
         </Link>
       </motion.div>

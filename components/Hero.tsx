@@ -21,7 +21,7 @@ export default function Hero() {
       <h1 className="text-3xl font-bold max-w-4xl md:text-5xl">
         Creating modern and innovative websites for a unique digital experience.
       </h1>
-      <div className="flex items-center gap-16">
+      <div className="font-semibold flex items-center gap-16">
         <Link
           href={"mailto:hamzak1738@gmail.com"}
           target="_blank"
@@ -33,7 +33,7 @@ export default function Hero() {
           }}
           className="flex items-center gap-1 hover:underline w-fit h-fit"
         >
-          <p>Send a message</p>
+          Send a message
           <SquareArrowOutUpRight className="size-4" />
         </Link>
         <Link
@@ -47,7 +47,7 @@ export default function Hero() {
           }}
           className="flex items-center gap-1 hover:underline w-fit h-fit"
         >
-          <p>Let&apos;s connect</p>
+          Let&apos;s connect
           <SquareArrowOutUpRight className="size-4" />
         </Link>
       </div>
