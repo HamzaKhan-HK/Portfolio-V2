@@ -65,7 +65,7 @@ export default function Cursor() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          ref={(ref: HTMLDivElement) => (circles.current[i] = ref)}
+          ref={(ref: HTMLDivElement | null) => (circles.current[i] = ref)}
           key={i}
           style={{
             backgroundColor: color,
