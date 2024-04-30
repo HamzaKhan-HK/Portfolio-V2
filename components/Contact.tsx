@@ -11,7 +11,7 @@ export default function Contact() {
   const { setIsHovered } = useContext(CursorContext);
 
   return (
-    <section className="mt-40">
+    <section className="mt-40 max-w-7xl m-auto px-12">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

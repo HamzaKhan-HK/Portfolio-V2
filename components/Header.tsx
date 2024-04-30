@@ -9,7 +9,7 @@ export default function Header() {
   const { setIsHovered } = useContext(CursorContext);
 
   return (
-    <header className="flex items-center justify-between font-semibold px-12 pt-12">
+    <header className="flex items-center justify-between font-semibold px-12 pt-12 max-w-7xl m-auto">
       <Link
         href={"/"}
         onMouseOver={() => {

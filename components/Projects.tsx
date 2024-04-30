@@ -25,7 +25,7 @@ export default function Projects({
   const { setIsHovered } = useContext(CursorContext);
 
   return (
-    <section>
+    <section className="max-w-7xl m-auto px-12">
       <div className="mt-24">
         <motion.div
           initial={{ opacity: 0 }}

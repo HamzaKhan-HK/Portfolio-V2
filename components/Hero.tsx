@@ -16,7 +16,7 @@ export default function Hero() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="flex flex-col items-start justify-end h-[calc(100vh-9rem)] gap-y-8"
+      className="flex flex-col items-start justify-end h-[calc(100vh-9rem)] gap-y-8 max-w-7xl m-auto px-12"
     >
       <h1 className="text-3xl font-bold max-w-4xl md:text-5xl">
         Creating modern and innovative websites for a unique digital experience.

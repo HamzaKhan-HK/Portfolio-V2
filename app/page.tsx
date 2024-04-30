@@ -25,7 +25,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true }}
-        className="mt-40"
+        className="mt-40 max-w-7xl m-auto px-12"
       >
         <div className="space-y-5">
           <h3 className="text-2xl font-bold md:text-4xl">Personal Work</h3>
